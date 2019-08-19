@@ -1,0 +1,26 @@
+<mat-sidenav-container
+    class="sn" (backdropClick)="close()">
+  <mat-sidenav class="sn-container" #sidenav (keydown.escape)="close()" disableClose>
+    <div class="sn-container-links">
+    <p><button mat-button (click)="close()"><i class="material-icons">close</i></button></p>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Work Experience</li>
+        <li>Demo Dashboard</li>
+      </ul>
+    </div>
+
+    <div class="sn-picture">
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sn-content">
+    <p><button mat-button (click)="sidenav.open()">
+      <i class="material-icons">menu</i>
+    </button></p>
+  </mat-sidenav-content>
+</mat-sidenav-container>

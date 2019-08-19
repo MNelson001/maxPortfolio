@@ -1,0 +1,60 @@
+%background {
+    background: #3d3d3d;
+}
+
+%title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 22px;
+}
+
+%subtitle {
+
+}
+
+:host ::ng-deep {
+    .mat-drawer-inner-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.sn {
+    height: 100%;
+
+    &-container {
+        @extend %background;
+        width: 15%;
+
+        i {
+            color: #ffffff;
+        }
+
+        &-links {
+            height: 20%;
+        
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+
+                li {
+                    color: #ffffff;
+                    @extend %title;
+                }
+            }
+        }
+    }
+
+    &-picture {
+        height: 15%;
+        background: #ffffff;
+        margin-bottom: 50px;
+        width: 50%;
+        align-self: center;
+        border-radius: 50%
+    }
+}
