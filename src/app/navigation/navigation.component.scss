@@ -12,6 +12,7 @@
 
 }
 
+// Allow to break free from encapsulation.
 :host ::ng-deep {
     .mat-drawer-inner-container {
         display: flex;
@@ -50,11 +51,21 @@
     }
 
     &-picture {
-        height: 15%;
-        background: #ffffff;
+        height: 150px;
+        background: linear-gradient(to right, rgba(255,41,91,1) 0%, rgba(0,106,163,1) 0%, rgba(0,255,204,1) 0%, rgba(16,166,166,1) 100%);
         margin-bottom: 50px;
-        width: 50%;
+        width: 150px;
         align-self: center;
-        border-radius: 50%
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        &-img {
+            height: 140px;
+            width: 140px;
+            background: #ffffff;
+            border-radius: 50%;
+        }
     }
 }
