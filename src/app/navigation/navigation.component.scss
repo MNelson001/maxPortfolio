@@ -8,25 +8,34 @@
     font-size: 22px;
 }
 
-%subtitle {
-
+i {
+    font-size: 50px;
+    color: #ffffff;
 }
 
 // Allow to break free from encapsulation.
 :host ::ng-deep {
+
     .mat-drawer-inner-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background: #3d3d3d;
+
     }
 }
 
 .sn {
     height: 100%;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    width: 15%;
 
+    // Links and menu close button in sidenav
     &-container {
         @extend %background;
-        width: 15%;
+        width: 100%;
 
         i {
             color: #ffffff;
@@ -41,15 +50,50 @@
                 flex-direction: column;
                 height: 100%;
                 justify-content: space-between;
+                padding: 0px;
+                margin-left: 7px;
 
                 li {
                     color: #ffffff;
                     @extend %title;
+                    position: relative;
+                    text-decoration: none;
+                    padding-bottom: 5px;
+
+                    a {
+                        color: #ffffff;
+                        text-decoration: none;
+                    }
+                }
+
+                li:hover {
+                    cursor: pointer;
+                }
+
+                li:before {
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba(0,255,204,1);
+                    visibility: hidden;
+                    -webkit-transform: scaleX(0);
+                    transform: scaleX(0);
+                    -webkit-transition: all 0.3s ease-in-out 0s;
+                    transition: all 0.3s ease-in-out 0s;
+                }
+
+                li:hover:before {
+                    visibility: visible;
+                    transform: scaleX(1)
                 }
             }
         }
     }
 
+    // Image in sidenav
     &-picture {
         height: 150px;
         background: linear-gradient(to right, rgba(255,41,91,1) 0%, rgba(0,106,163,1) 0%, rgba(0,255,204,1) 0%, rgba(16,166,166,1) 100%);
@@ -64,7 +108,9 @@
         &-img {
             height: 140px;
             width: 140px;
-            background: #ffffff;
+            background-image: url('../../assets/images/maxNelson.jpg');
+            background-size: cover;
+            background-position: center;
             border-radius: 50%;
         }
     }

@@ -1,28 +1,27 @@
-<mat-sidenav-container
-    class="sn" (backdropClick)="close()">
-  <mat-sidenav class="sn-container" #sidenav (keydown.escape)="close()" disableClose>
+<mat-drawer-container class="sn" autosize>
+  <mat-drawer #sidenav class="sn-container" mode="side">
     <div class="sn-container-links">
-    <p><button mat-button (click)="close()"><i class="material-icons">close</i></button></p>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Work Experience</li>
-        <li>Demo Dashboard</li>
-      </ul>
-    </div>
-
-    <div class="sn-picture">
-      <div class="sn-picture-img">
-
+      <p><button mat-button (click)="close()"><i class="material-icons">close</i></button></p>
+        <ul>
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="">Contact</a></li>
+          <li><a routerLink="">Work Experience</a></li>
+          <li><a routerLink="">Demo Dashboard</a></li>
+        </ul>
       </div>
-    </div>
+  
+      <div class="sn-picture">
+        <div class="sn-picture-img">
+  
+        </div>
+      </div>
+  </mat-drawer>
 
-  </mat-sidenav>
-
-  <mat-sidenav-content class="sn-content">
+  <div class="example-sidenav-content">
     <p><button mat-button (click)="sidenav.open()">
       <i class="material-icons">menu</i>
     </button></p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </div>
+
+</mat-drawer-container>

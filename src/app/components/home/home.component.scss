@@ -1,0 +1,139 @@
+.landing {
+    height: 100%;
+    overflow: hidden;
+
+    .lc {
+        background-image: url('../../../assets/images/landing.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: relative;
+    
+        &-opaque {
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.35);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .angled {
+                position: absolute;
+                width: 80%;
+                height: 100%;
+                background: rgba(0,255,204,0.25);
+                transform: skew(45deg);
+                right: -30%;
+            }
+    
+            &-cta {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+                h1 {
+                    font-size: 44px;
+                    color: #ffffff;
+                    margin: 10px;
+                    font-weight: 100;
+                }
+    
+                p {
+                    font-size: 20px;
+                    margin: 10px;
+                    font-weight: 100;
+                    color: #ffffff;
+                }
+    
+                button {
+                    margin: 10px;
+                    width: 20%;
+                    background: transparent;
+                    height: 50px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    border-top: 1px solid #ffffff;
+                    border-bottom: 1px solid #ffffff;
+                    z-index: 2;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    
+                    p {
+                        margin: 0px;
+                        color: #ffffff;
+                        font-size: 16px;
+                        font-weight: 100;
+                    }
+                }
+    
+                button:hover {
+                    cursor: pointer;
+                    background: rgba(0, 5, 0, 0.35);
+                    border: unset;
+                }
+            }
+        }
+    }
+}
+
+.welcome {
+    height: 100%;
+
+    &-header {
+        font-size: 50px;
+        font-weight: 100;
+        text-transform: uppercase;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 15px;
+        border-bottom: 2px solid rgb(0,255,204);
+        width: 15%;
+        height: 5%;
+        letter-spacing: 10px;
+    }
+
+    .skillset {
+        display: flex;
+        justify-content: space-around;
+        height: 75%;
+        align-items: center;
+
+        &-card {
+            width: 15%;
+            height: 75%;
+            box-shadow: 3px 3px 15px #999999;
+
+            img {
+                border-top: 2px solid #cfcfcf;
+            }
+
+            .mat-card-content {
+                font-size: 16px;
+                font-weight: 100;
+                line-height: 25px;
+            }
+
+            &-btn {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+.what-i-do {
+    height: 100%;
+
+    &-bg {
+        background: #3d3d3d;
+        height: 100%;
+        width: 50%;
+    }    
+}
